@@ -22,7 +22,7 @@ struct ContentView: View {
     func setupTips(){
         do {
             try Tips.resetDatastore()
-            Tips.showAllTipsForTesting()
+            Tips.showAllTipsForTesting() // It allows the popover to come out every time during the test.
             try Tips.configure([
                 .displayFrequency(.immediate)
             ])
